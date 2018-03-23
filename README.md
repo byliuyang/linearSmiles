@@ -3,7 +3,7 @@ Smile detectors based on linear regression
 
 ## ¯\\\_(ツ)_/¯
 
-The `solve_weight_detector.py` computes the optimal weights `w` and bias term `b` for the linear regression model by deriving the expression for the gradient of the cost function w.r.t. w and b, setting it to 0, and then solving.
+`solve_weight_detector.py` computes the optimal weights `w` and bias term `b` for the linear regression model by deriving the expression for the gradient of the cost function w.r.t. w and b, setting it to 0, and then solving.
 
 The weight is computed as
 
