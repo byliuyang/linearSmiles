@@ -25,7 +25,25 @@ with the cost function of
 
 ### Gradient Descent
 
-The algorithm picks a random starting value for `w` and `b` ∈ R and a small learning rate (e.g., ε = .001). (In my code, I sampled each component of w and b from a Normal distribution with standard deviation 0.01; use np.random.randn). Then, using the expression for the gradient of the cost function, iteratively update w,b to reduce the cost fMSE(w, b). Stop when the difference between fMSE over successive training rounds is below some “tolerance” (e.g., δ = 0.000001). After optimizing w and b only on the training set, compute and report the cost fMSE on the training set Dtr and (separately) on the testing set Dte. Both of these values should be very close to what you computed using Method 1. Note that this method of optimizing model weights is much more general than Method 1 above, at the expense of requiring some additional optimization hyperparameters
+The algorithm picks a random starting value for `w` and `b` and a small learning rate (e.g., `ε` = .001). Then, using the expression for the gradient of the cost function, iteratively update w,b to reduce the cost. Stop when the difference between costs over successive training rounds is below some “tolerance” (e.g., `δ` = 0.000001). This method of optimizing model weights is much more general than analytically computing the optimal weights, at the expense of requiring some additional optimization hyperparameters (e.g., learning rate, tolerance).
+
+The gradient of error w.r.t weight and w.r.t bias are computed as 
+
+<div align="center">
+	<img width="400" src ="gradient_weight.png"/>
+</div>
+
+and
+
+<div align="center">
+	<img width="380" src ="gradient_bias.png"/>
+</div>
+
+individually, where
+
+<div align="center">
+	<img width="190" src ="O.png"/>
+</div>
 
 ## Getting Started
 
@@ -64,11 +82,11 @@ Here is an example output:
 
 ```bash
 Start training the model
-Training MSE: 0.064750
-Testing MSE: 0.134026
+Training MSE: 0.060500
+Testing MSE: 0.117615
 
-Training Accuracy: 0.870500
-Testing Accurary: 0.731947
+Training Accuracy: 0.879000
+Testing Accurary: 0.764770
 ```
 
 ## Authors
