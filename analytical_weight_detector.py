@@ -32,7 +32,7 @@ def detect_smile(trainingFaces, trainingLabels, testingFaces, testingLabels):
 
     print()
     print("Training Accuracy: %f" % accuracy(trainingLabels, clf.predict(trainingFaces)))
-    print("Testing Accurary: %f" % accuracy(testingLabels, clf.predict(testingFaces)))
+    print("Testing Accuracy: %f" % accuracy(testingLabels, clf.predict(testingFaces)))
 
 def main():
     trainingFaces = np.load("trainingFaces.npy")
