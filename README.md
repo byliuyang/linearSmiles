@@ -82,11 +82,11 @@ Here is an example output:
 
 ```bash
 Start training the model
-Training MSE: 0.060500
-Testing MSE: 0.117615
+Training MSE: 0.057250
+Testing MSE: 0.112418
 
-Training Accuracy: 0.879000
-Testing Accurary: 0.764770
+Training Accuracy: 0.885500
+Testing Accurary: 0.775164
 ```
 
 ## Authors

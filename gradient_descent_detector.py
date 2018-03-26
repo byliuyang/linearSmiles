@@ -25,8 +25,8 @@ def smile_classifier(trainingFaces, trainingLabels):
 
     X = trainingFaces.T
     y = trainingLabels
-    w = np.random.rand(X.shape[0])
-    b = np.random.rand()
+    w = .01 * np.random.rand(X.shape[0])
+    b = .01 * np.random.rand()
 
     prev_error = error(X, y, w, b)
 
