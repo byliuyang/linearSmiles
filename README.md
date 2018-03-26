@@ -45,6 +45,22 @@ individually, where
 	<img width="190" src ="O.png"/>
 </div>
 
+### Gradient Descent with Regulation
+
+In machine learning, **low** training error and **high** testing error imply **overfitting**. One of the simplest and oldest regularization techniques is to ***panelize*** large weights in the cost function. The L2 regularized error and the regularized gradient of error w.r.t weight are computed as
+
+<div align="center">
+	<img width="270" src ="mse_regularized.png"/>
+</div>
+
+and
+
+<div align="center">
+	<img width="240" src ="gradient_weight_regularized.png"/>
+</div>
+
+seperately.
+
 ## Getting Started
 
 ### Prerequisite
@@ -68,7 +84,7 @@ Training MSE: 0.052500
 Testing MSE: 0.116247
 
 Training Accuracy: 0.895000
-Testing Accurary: 0.767505
+Testing Accuracy: 0.767505
 ```
 
 #### Gradient Descent Detector
@@ -86,7 +102,25 @@ Training MSE: 0.057250
 Testing MSE: 0.112418
 
 Training Accuracy: 0.885500
-Testing Accurary: 0.775164
+Testing Accuracy: 0.775164
+```
+
+#### Gradient Descent with Regulation Detector
+To test out the gradient descent with regulation detector, run the following command in the terminal:
+
+```bash
+python3 gradient_descent_regulation_detector.py
+```
+
+Here is an example output:
+
+```bash
+Start training the model
+Unregulated Training MSE: 0.079500
+Unregulated Testing MSE: 0.094365
+
+Training Accuracy: 0.841000
+Testing Accuracy: 0.811269
 ```
 
 ## Authors
