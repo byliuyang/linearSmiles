@@ -19,7 +19,7 @@ def smile_classifier(trainingFaces, trainingLabels):
     
     def predict(faces):
         yhats = np.dot(faces, w) + b
-        return [0 if yhat <= 0.5 else 1 for yhat in yhats]
+        return yhats > .5
     
     Classifier =  namedtuple("Classifier", ["w", "b", "predict"])
     return Classifier(w, b, predict)
