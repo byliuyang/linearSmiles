@@ -80,8 +80,8 @@ python3 analytical_weight_detector.py
 Here is an example output:
 
 ```bash
-Training MSE: 0.052500
-Testing MSE: 0.116247
+Training MSE: 0.049402
+Testing MSE: 0.092220
 
 Training Accuracy: 0.895000
 Testing Accuracy: 0.767505
@@ -98,11 +98,11 @@ Here is an example output:
 
 ```bash
 Start training the model
-Training MSE: 0.057250
-Testing MSE: 0.112418
+Training MSE: 0.052163
+Testing MSE: 0.086731
 
-Training Accuracy: 0.885500
-Testing Accuracy: 0.775164
+Training Accuracy: 0.882500
+Testing Accuracy: 0.774617
 ```
 
 #### Gradient Descent with Regulation Detector
@@ -116,8 +116,8 @@ Here is an example output:
 
 ```bash
 Start training the model
-Unregulated Training MSE: 0.079500
-Unregulated Testing MSE: 0.094365
+Unregulated Training MSE: 0.066756
+Unregulated Testing MSE: 0.073758
 
 Training Accuracy: 0.841000
 Testing Accuracy: 0.811269

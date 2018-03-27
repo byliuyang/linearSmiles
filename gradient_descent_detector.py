@@ -4,6 +4,9 @@ from collections import namedtuple
 def accuracy(y, yhat):
     return np.mean(y == yhat)
 
+def toLabel(yhat):
+    return yhat > 0.5
+
 def mse(y, yhat):
     return 0.5 * np.mean((yhat - y) ** 2)
 
@@ -43,8 +46,7 @@ def smile_classifier(trainingFaces, trainingLabels):
             prev_error = current_error
     
     def predict(faces):
-        predictions =  yhat(faces.T, w, b)
-        return [0 if prediction <= 0.5 else 1 for prediction in predictions]
+        return yhat(faces.T, w, b)
 
     Classifier =  namedtuple("Classifier", ["w", "b", "predict"])
     return Classifier(w, b, predict)
@@ -58,8 +60,8 @@ def detect_smile(trainingFaces, trainingLabels, testingFaces, testingLabels):
     print("Testing MSE: %f" % mse(testingLabels, clf.predict(testingFaces)))
 
     print()
-    print("Training Accuracy: %f" % accuracy(trainingLabels, clf.predict(trainingFaces)))
-    print("Testing Accuracy: %f" % accuracy(testingLabels, clf.predict(testingFaces)))
+    print("Training Accuracy: %f" % accuracy(trainingLabels, toLabel(clf.predict(trainingFaces))))
+    print("Testing Accuracy: %f" % accuracy(testingLabels, toLabel(clf.predict(testingFaces))))
 
 def main():
     trainingFaces = np.load("trainingFaces.npy")
