@@ -47,7 +47,7 @@ def smile_classifier(trainingFaces, trainingLabels):
     
     def predict(faces):
         return yhat(faces.T, w, b)
-
+        
     Classifier =  namedtuple("Classifier", ["w", "b", "predict"])
     return Classifier(w, b, predict)
 
